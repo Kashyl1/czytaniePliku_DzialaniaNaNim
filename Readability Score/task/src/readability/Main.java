@@ -89,11 +89,11 @@ public class Main {
         String malaLitera = tekst.toLowerCase();
         Matcher matcher = pattern.matcher(malaLitera); // Szuka w zawartosci tekstu
         int licz = 0;
-        while (matcher.find()) {  // Skanuje tekst w poszukiwaniu kolejnego ciągu ktory spełnia wzorzec
+        while (matcher.find())  // Skanuje tekst w poszukiwaniu kolejnego ciągu ktory spełnia wzorzec
             licz++;
             if (malaLitera.endsWith("e")) // Jezeli konczy sie na 'e' to odejmuje
                 licz--;
-        }
+        
         return licz < 0 ? 1 : licz;
     }
 
